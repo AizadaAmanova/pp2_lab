@@ -3,7 +3,6 @@ def solve(numheads, numlegs):
         rabbits = numheads - chickens 
         if (chickens * 2 + rabbits * 4) == numlegs:  
             return chickens, rabbits 
-    return "No solution" 
 
 numheads = 35
 numlegs = 94
