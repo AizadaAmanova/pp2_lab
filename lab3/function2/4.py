@@ -1,5 +1,4 @@
-movies = [
-{
+movies = {
 "name": "Usual Suspects", 
 "imdb": 7.0,
 "category": "Thriller"
@@ -74,22 +73,26 @@ movies = [
 "imdb": 7.2,
 "category": "Romance"
 }
-]
-def imdvpoint(movies,name):
-    sum=0
-    cnt=0
+def imdvpoint(movies, name):
+    sum = 0
+    cnt = 0
     for movie in movies:
         if movie["name"] in name:
-            sum+=movie["imdb"]
-            cnt+=1
-    return sum/cnt
-name=[]
-while name1!="done":
-    
-    name1=input("name movie:")
+            sum += movie["imdb"]
+            cnt += 1
+    if cnt > 0:
+        return sum / cnt
+    else:
+        return 0 
+
+name = []
+
+while True:
+    name1 = input("Enter movie name (or 'done' to finish): ")
     if name1 == 'done':
         break
     name.append(name1)
 
-print(imdvpoint(movies,name))
-        
+
+average_score = imdvpoint(movies, name)
+print(f"The average IMDb score for the selected movies is: {average_score:.2f}")
