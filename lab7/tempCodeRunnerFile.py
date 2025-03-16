@@ -1,0 +1,1 @@
+"C:\Users\Acer\Desktop\pp2_lab\lab7\clock.png"
