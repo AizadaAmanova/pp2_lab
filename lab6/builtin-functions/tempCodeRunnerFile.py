@@ -1,0 +1,1 @@
+result = math.prod(numbers)
